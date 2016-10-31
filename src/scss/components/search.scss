@@ -19,19 +19,21 @@
     input, button {
         display: inline-block;
     }
+    .text-input, .number-input, .reset , .search {
+        min-height:  auto;
+        margin-right: 15px;
+        width: auto;
+    }
     .text-input { 
         width: 370px;
     }
     .number-input {
         width: 150px;
     }
-    .reset, .search {
-        width:auto;
-    }
+
 }
 
     input, button {
-        margin-right: 15px;
         border-radius: 3px;
     }
     button {

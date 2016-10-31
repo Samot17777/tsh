@@ -8,7 +8,7 @@
     "normalize.css": "^5.0.0"
   },
   "scripts": {
-    "start": "npm install"
+    "start": "npm install && gulp build && node server.js"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

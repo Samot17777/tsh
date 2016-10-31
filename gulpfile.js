@@ -53,6 +53,8 @@ gulp.task('libjs',function(){
 			// .pipe(minify()) UNCOMMENT TO MINIFY
 			.pipe(gulp.dest('./public/js'));
 });
+gulp.task("build",['libjs','uglify','sass'], function(){
+});
 
 gulp.task("default",['libjs','uglify','sass'], function(){
 		gulp.watch('src/scss/**/*scss',["sass"]);
