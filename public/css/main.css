@@ -1,0 +1,215 @@
+* {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important; }
+
+body, html {
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #555555; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto; }
+  @media only screen and (min-width: 992px) {
+    .container {
+      width: 900px; } }
+  @media only screen and (min-width: 1200px) {
+    .container {
+      width: 1000px; } }
+
+.heading {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0; }
+  .heading h1 {
+    color: #2288b7;
+    font-size: 60px;
+    font-weight: normal; }
+  .heading p {
+    font-size: 17px; }
+
+.serach {
+  height: auto;
+  margin: 10px 20px; }
+  .serach input, .serach button {
+    display: block; }
+  .serach .text-input, .serach .number-input, .serach .reset, .serach .search {
+    width: 100%;
+    min-height: 40px;
+    margin: 10px 0; }
+  @media only screen and (min-width: 992px) {
+    .serach {
+      width: 80%;
+      min-width: 750px;
+      height: 38px;
+      margin: 15px auto; }
+      .serach input, .serach button {
+        display: inline-block; }
+      .serach .text-input {
+        width: 370px; }
+      .serach .number-input {
+        width: 150px; }
+      .serach .reset, .serach .search {
+        width: auto; } }
+  .serach input, .serach button {
+    margin-right: 15px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+  .serach button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 13px; }
+  .serach .text-input {
+    border: 1px solid #e0e0e0;
+    padding: 5px; }
+  .serach .number-input {
+    border: 1px solid #9c9c9c;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-box-shadow: 0 0 0 5px #ececec;
+    box-shadow: 0 0 0 5px #ececec;
+    background: #f2f2f2;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f2f2f2));
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%); }
+    .serach .number-input::-webkit-input-placeholder {
+      color: black; }
+    .serach .number-input:-moz-placeholder {
+      /* Firefox 18- */
+      color: black; }
+    .serach .number-input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: black; }
+    .serach .number-input:-ms-input-placeholder {
+      color: black; }
+  .serach .reset {
+    background: #c5c5c5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#c5c5c5));
+    background: -webkit-linear-gradient(top, #f1f1f1 0%, #c5c5c5 100%);
+    background: -moz-linear-gradient(top, #f1f1f1 0%, #c5c5c5 100%);
+    background: -o-linear-gradient(top, #f1f1f1 0%, #c5c5c5 100%);
+    background: linear-gradient(to bottom, #f1f1f1 0%, #c5c5c5 100%);
+    color: #555555; }
+  .serach .search {
+    background: #6aa0f3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6aa0f3), to(#2278f0));
+    background: -webkit-linear-gradient(top, #6aa0f3 0%, #2278f0 100%);
+    background: -moz-linear-gradient(top, #6aa0f3 0%, #2278f0 100%);
+    background: -o-linear-gradient(top, #6aa0f3 0%, #2278f0 100%);
+    background: linear-gradient(to bottom, #6aa0f3 0%, #2278f0 100%);
+    color: white; }
+
+.table {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  width: 100%;
+  border: 1px solid #cccfd1;
+  border-spacing: 0; }
+  .table thead {
+    background: #e0e0e0; }
+    .table thead th {
+      border: none; }
+  .table tr:last-of-type td {
+    border-bottom: none; }
+  .table tr td, .table tr th {
+    padding: 15px 5px;
+    border-bottom: 1px solid #cccfd1;
+    text-align: center; }
+    .table tr td:first-child, .table tr th:first-child {
+      text-align: left; }
+      @media only screen and (min-width: 992px) {
+        .table tr td:first-child, .table tr th:first-child {
+          width: 60%; } }
+  .table tbody tr:nth-child(even) {
+    background: #f7f7f7; }
+
+.pagination {
+  margin-top: 20px;
+  text-align: center; }
+  .pagination .item {
+    color: #555555;
+    display: inline-block;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background: #f5f5f5;
+    border: 1px solid #cccfd1;
+    margin-right: 5px; }
+    .pagination .item:hover {
+      cursor: pointer; }
+    .pagination .item.active {
+      color: white;
+      background: #555555; }
+
+.modal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.8; }
+
+.modal-dialog {
+  z-index: 10000;
+  position: fixed;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  -webkit-box-shadow: 4px 4px 80px #000;
+  box-shadow: 4px 4px 80px #000; }
+
+.modal-dialog-content {
+  padding: 10px;
+  text-align: left; }
+
+.modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  display: inline-block; }
+
+.rate {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #818181;
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#dadcdc));
+  background: -webkit-linear-gradient(top, white 0%, #dadcdc 100%);
+  background: -moz-linear-gradient(top, white 0%, #dadcdc 100%);
+  background: -o-linear-gradient(top, white 0%, #dadcdc 100%);
+  background: linear-gradient(to bottom, white 0%, #dadcdc 100%);
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  margin: 0 1px;
+  display: inline-block;
+  text-align: center; }
+  .rate.active {
+    color: white;
+    background: #61bce9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#90cde9), to(#6482a1));
+    background: -webkit-linear-gradient(top, #90cde9 0%, #6482a1 100%);
+    background: -moz-linear-gradient(top, #90cde9 0%, #6482a1 100%);
+    background: -o-linear-gradient(top, #90cde9 0%, #6482a1 100%);
+    background: linear-gradient(to bottom, #90cde9 0%, #6482a1 100%); }
+
+/*# sourceMappingURL=main.css.map */

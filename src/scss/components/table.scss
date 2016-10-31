@@ -1,0 +1,36 @@
+.table{
+    border-radius: 3px;
+    width: 100%;
+    border:1px solid $table-border;
+    border-spacing: 0;
+    thead {
+        background: $border-color;
+        th{
+            border:none;
+        }
+    }
+    tr{
+        &:last-of-type td{
+            border-bottom: none;
+        }
+        
+        td, th {
+            padding: 15px 5px;
+            border-bottom:1px solid $table-border; 
+            text-align: center;
+            &:first-child {
+                text-align: left;
+                @include media_md() {
+                    width:60%;
+                }
+            }
+
+            
+        }
+    }
+    tbody {
+        tr:nth-child(even) {
+            background:#f7f7f7;
+        }
+    }
+}

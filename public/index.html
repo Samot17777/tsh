@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<base href="/">
+
+	<title>Tsh</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/normalize.css" type="text/css"> 
+	<link rel="stylesheet" href="css/main.css" type="text/css"> 
+	<link rel="shortcut icon" href="">
+
+
+	<script src="js/libs.js"></script>
+	<script src="js/all.js"></script>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-app="tsh" ng-controller="MainController as main">
+	<main class="container">
+		<div class="heading">
+			<h1>Where your money goes</h1>
+			<p> Payments made by Chichester District Council to individual suppliers with a value over £500 made witin October.</p>
+		</div>
+		<div class="serach">
+			<input class="text-input" type="text" name="suppliers" value="" placeholder="Seach suppliers" ng-model="main.suppliers">
+			<input class="number-input" type="number" ng-model="main.rate"  ng-min="0" ng-max="5" ng-step="1" placeholder="Select pound rating">
+			<button class="reset" ng-click="main.reset()">Reset</button>
+			<button class="search" ng-click="main.search()" >Submit</button>
+		</div>
+		<table class="table"> 
+			<thead>
+				<tr>
+					<th>Supplier</th>
+					<th>Pound Rating</th>
+					<th>Reference</th>
+					<th>Value</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="payment in main.APIhandler.payments" ng-click="main.openModal($index)">
+					<td> {{ payment.payment_supplier }}</td>
+					<td>
+						<span class="rate" ng-repeat="i in [1, 2, 3, 4,5] track by $index" ng-class="{'active': $index<=payment.payment_cost_rating}">£</span>
+					</td>
+					<td>{{ payment.payment_ref }}</td>
+					<td>{{ payment.payment_amount | currency:'£' }}</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="pagination">
+			<button ng-click="main.prev()" href="#" class="item active">
+				<
+			</button>
+			<button ng-click="main.search(n)" ng-repeat="n in [main.APIhandler.pagination.from, main.APIhandler.pagination.to] | makeRange" href="#" class="item" ng-class="{'active':(n == main.APIhandler.pagination.current)}">
+				{{ n }}
+			</button>
+			<button ng-click="main.next()" href="#" class="item active">
+				>
+			</button>
+
+		</div>
+	</main>
+	<modal-dialog show='main.modalShown'>
+		<div>
+			{{ main.modal.payment_supplier }}
+		</div>
+		<div>
+			<p>Reference number : {{ main.modal.payment_ref }}</p>
+			<p>Money : {{ main.modal.payment_amount | currency:'£' }}	   </p>
+			<span class="rate" ng-repeat="i in [1, 2, 3, 4,5] track by $index" ng-class="{'active': $index<=main.modal.payment_cost_rating}">£</span>
+		</div>
+	</modal-dialog>
+</body>
+</html>

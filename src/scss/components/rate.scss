@@ -1,0 +1,17 @@
+.rate {
+    border-radius: 50%;
+    border:1px solid #818181;
+    background: white;
+    background: linear-gradient(to bottom, white 0%,#dadcdc 100%);
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    margin:0 1px;
+    display: inline-block;
+    text-align: center;
+    &.active {
+        color:white;
+        background: #61bce9;
+        background: linear-gradient(to bottom, #90cde9 0%,#6482a1 100%);
+    }
+}

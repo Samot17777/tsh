@@ -1,0 +1,39 @@
+@mixin media_xs() {
+    @media only screen and (min-width : 480px) {
+        @content;
+    }
+}
+@mixin media_sm() {
+    @media only screen and (min-width : 768px) {
+        @content;
+    }
+}
+@mixin media_md() {
+    @media only screen and (min-width : 992px) {
+        @content;
+    }
+}
+@mixin media_lg() {
+    @media only screen and (min-width : 1200px) {
+        @content;
+    }  
+}
+
+
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+    color: $color;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+    color: $color;  
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+    color: $color;  
+    }
+
+    &:-ms-input-placeholder {  
+    color: $color;  
+    }
+}
