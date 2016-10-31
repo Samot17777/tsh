@@ -51,13 +51,13 @@
 			</tbody>
 		</table>
 		<div class="pagination">
-			<button ng-click="main.prev()" href="#" class="item active">
+			<button ng-show="main.APIhandler.pagination.total" ng-click="main.prev()" href="#" class="item active">
 				<
 			</button>
 			<button ng-click="main.search(n)" ng-repeat="n in [main.APIhandler.pagination.from, main.APIhandler.pagination.to] | makeRange" href="#" class="item" ng-class="{'active':(n == main.APIhandler.pagination.current)}">
 				{{ n }}
 			</button>
-			<button ng-click="main.next()" href="#" class="item active">
+			<button ng-show="main.APIhandler.pagination.total" ng-click="main.next()" href="#" class="item active">
 				>
 			</button>
 
