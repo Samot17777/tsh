@@ -17,7 +17,7 @@
         }
         
         td, th {
-            padding: 15px 5px;
+            padding: 17px 5px;
             border-bottom:1px solid $table-border; 
             text-align: center;
             &:first-child {
@@ -27,8 +27,9 @@
                     width:60%;
                 }
             }
-
-            
+        }
+        th {
+            padding:22px 5px;
         }
     }
     tbody {
