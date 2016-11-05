@@ -1,17 +1,20 @@
 .rate {
     border-radius: 50%;
-    border:1px solid #818181;
+    border:1px solid #8a8a8a;
     background: white;
     background: linear-gradient(to bottom, white 0%,#dadcdc 100%);
-    padding: 5px;
+    padding: 4px;
     width: 30px;
     height: 30px;
     margin:0 1px;
     display: inline-block;
     text-align: center;
+    font:15px 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    color:$table-head-text;
     &.active {
         color:white;
-        background: #61bce9;
-        background: linear-gradient(to bottom, #90cde9 0%,#6482a1 100%);
+        background: #8ed1f0;
+        background: linear-gradient(to bottom, #8ed1f0 0%,#4c95dc 100%);
     }
 }

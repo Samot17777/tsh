@@ -3,8 +3,10 @@
     width: 100%;
     border:1px solid $table-border;
     border-spacing: 0;
+    font:12px Helvetica, sans-serif;
     thead {
-        background: $border-color;
+        background: $table-head-background;
+        color: $table-head-text;
         th{
             border:none;
         }
@@ -20,6 +22,7 @@
             text-align: center;
             &:first-child {
                 text-align: left;
+                padding-left: 30px;
                 @include media_md() {
                     width:60%;
                 }
@@ -32,5 +35,9 @@
         tr:nth-child(even) {
             background:#f7f7f7;
         }
+        tr:nth-child(odd) {
+            background:#fdfdfd;
+        }
+        
     }
 }

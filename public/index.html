@@ -6,7 +6,7 @@
 
 	<title>Tsh</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet"> 
 	<link rel="stylesheet" href="css_plugins/normalize.css" type="text/css"> 
 	<link rel="stylesheet" href="css/main.css" type="text/css"> 
 	<link rel="shortcut icon" href="">
@@ -28,7 +28,7 @@
 			<input class="text-input" type="text" name="suppliers" value="" placeholder="Seach suppliers" ng-model="main.suppliers">
 			<input class="number-input" type="number" ng-model="main.rate"  ng-min="0" ng-max="5" ng-step="1" placeholder="Select pound rating">
 			<button class="reset" ng-click="main.reset()">Reset</button>
-			<button class="search" ng-click="main.search()" >Submit</button>
+			<button class="search" ng-click="main.search()" >Search</button>
 		</div>
 		<table class="table"> 
 			<thead>
@@ -51,13 +51,13 @@
 			</tbody>
 		</table>
 		<div class="pagination">
-			<button ng-show="main.APIhandler.pagination.total" ng-click="main.prev()" href="#" class="item active">
+			<button ng-show="main.APIhandler.pagination.total" ng-click="main.prev()" href="#" class="item">
 				<
 			</button>
 			<button ng-click="main.search(n)" ng-repeat="n in [main.APIhandler.pagination.from, main.APIhandler.pagination.to] | makeRange" href="#" class="item" ng-class="{'active':(n == main.APIhandler.pagination.current)}">
 				{{ n }}
 			</button>
-			<button ng-show="main.APIhandler.pagination.total" ng-click="main.next()" href="#" class="item active">
+			<button ng-show="main.APIhandler.pagination.total" ng-click="main.next()" href="#" class="item">
 				>
 			</button>
 

@@ -41,27 +41,38 @@
         padding: 10px 20px;
         font-size: 13px;
     }
+    .text-input, .number-input {
+        padding-left: 8px;
+    }
+    .text-input, .reset, .search {
+        font:12px Helvetica, sans-serif; 
+    }   
+    .reset, .search {
+        font-weight: bold;
+    }
     .text-input {
-        border:1px solid $border-color;
+        border:1px solid $input-search-border;
         padding: 5px;
     }
     .number-input{
         @include placeholder(black);
         border:1px solid $btn-number-border;
-        font-size: 12px;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
         line-height: 16px;
         box-shadow: 0 0 0 5px $btn-background;
         background: #f2f2f2;
         background: linear-gradient(to bottom, #ffffff 0%,#f2f2f2 100%);
     }
+
     .reset {
         background: #c5c5c5;
-        background: linear-gradient(to bottom, #f1f1f1 0%,#c5c5c5 100%);
+        background: linear-gradient(to bottom, #f2f2f2 0%,#c4c4c4 100%);
         color:$text-color;
     }
     .search {
         background: #6aa0f3;
-        background: linear-gradient(to bottom, #6aa0f3 0%,#2278f0 100%);
+        background: linear-gradient(to bottom, #6ba1f3 0%,#2077f0 100%);
         color: white;
     }
 
