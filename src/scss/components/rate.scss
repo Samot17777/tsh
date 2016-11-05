@@ -1,8 +1,8 @@
 .rate {
     border-radius: 50%;
-    border:1px solid #8a8a8a;
-    background: white;
-    background: linear-gradient(to bottom, white 0%,#dadcdc 100%);
+    border:1px solid $rate-border;
+    background: $rate-finish;
+    background: linear-gradient(to bottom, $rate-begin 0%, $rate-finish 100%);
     padding: 4px;
     width: 30px;
     height: 30px;
@@ -14,7 +14,8 @@
     color:$table-head-text;
     &.active {
         color:white;
-        background: #8ed1f0;
-        background: linear-gradient(to bottom, #8ed1f0 0%,#4c95dc 100%);
+        background: $rate-active-finish;
+        background: linear-gradient(to bottom, $rate-active-begin 0%, $rate-active-finish 100%);
     }
 }
+

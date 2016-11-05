@@ -31,13 +31,18 @@
         th {
             padding:22px 5px;
         }
+
     }
     tbody {
         tr:nth-child(even) {
-            background:#f7f7f7;
+            background:$table-even;
         }
         tr:nth-child(odd) {
-            background:#fdfdfd;
+            background:$table-odd;
+        }
+        tr:hover{
+            cursor:pointer;
+            background:$table-hover;
         }
         
     }

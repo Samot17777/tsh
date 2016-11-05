@@ -61,19 +61,20 @@
         font-size: 11px;
         line-height: 16px;
         box-shadow: 0 0 0 5px $btn-background;
-        background: #f2f2f2;
-        background: linear-gradient(to bottom, #ffffff 0%,#f2f2f2 100%);
+        background: $number-input-finish;
+        background: linear-gradient(to bottom, $number-input-begin 0%, $number-input-finish 100%);
     }
-
     .reset {
-        background: #c5c5c5;
-        background: linear-gradient(to bottom, #f2f2f2 0%,#c4c4c4 100%);
+        background: $reset-finish;
+        background: linear-gradient(to bottom, $reset-begin 0%, $reset-finish 100%);
         color:$text-color;
     }
+
     .search {
-        background: #6aa0f3;
-        background: linear-gradient(to bottom, #6ba1f3 0%,#2077f0 100%);
-        color: white;
+        background: $search-finish;
+        background: linear-gradient(to bottom, $search-begin 0%, $search-finish 100%);
+        color: $white;
     }
+
 
 }

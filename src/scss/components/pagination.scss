@@ -8,18 +8,19 @@
         padding: 5px;
         width: 30px;
         height: 30px;
-        background: #fff;
-        background: linear-gradient(to bottom, #fff 0%,#eaeaea 100%);
-        border:1px solid #bfbfbf;
+        background: $pagination-finish;
+        background: linear-gradient(to bottom, $pagination-begin 0%,$pagination-finish 100%);
+        border:1px solid $pagination-border;
+        
         margin-right: 5px;
         &:hover {
             cursor:pointer;
         }
         &.active{
-            color:white;
-            background: #585858;
-            background: linear-gradient(to bottom, #585858 0%,#5c5c5c 100%);
-            border-color: #585858;
+            color:$white;
+            background: $pagination-active-finish;
+            background: linear-gradient(to bottom, $pagination-active-begin 0%, $pagination-active-finish 100%);
+            border-color: $pagination-active-border;
         }
     }
 }
