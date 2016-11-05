@@ -2,7 +2,7 @@
     width: 100%;
     padding: 15px;
     margin: 0 auto;
-
+    background: #fdfdfd;
    @include media_md() {
        width:900px;
     }
@@ -18,7 +18,7 @@
         border-radius: 3px;
         transform: translate(-50%, -50%);
     }
-    box-shadow: 0 0 0 5px $btn-background;
+    box-shadow: 0 0 0 5px #d5d4d4;
 
 }
 
